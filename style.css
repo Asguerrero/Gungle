@@ -193,6 +193,8 @@ display: flex;
     font-weight: 300;
 }
 
+#mc_embed_signup h2 {
+	font-weight: 400;}
 @media only screen and (max-width: 600px) {
   .content-grid{
     display: flex;
