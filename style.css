@@ -126,7 +126,7 @@ ul{
 
 .form-button{
 
-    background: #60AD56; 
+    background: #60AD56 !important; 
     width: 200px;
     height: 50px;
     border-radius: 10px;
