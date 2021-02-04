@@ -185,6 +185,7 @@ display: flex;
 .form-title{
     margin-top: 1rem;
     margin-bottom: 3rem;
+    font-weight: 400;
 }
 
 .#mc_embed_signup .mc-field-group label {
