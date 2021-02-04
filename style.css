@@ -23,6 +23,10 @@ body{
 
 }
 
+.#mc_embed_signup .mc-field-group label {
+    font-size: 16px;
+}
+
 .footer-container {
     position: relative;
     padding: 10px 10px 0 10px;
