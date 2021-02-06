@@ -3,6 +3,7 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  height: 100vh;
 }
 
 
@@ -19,7 +20,7 @@ body{
 }
 
 .topbar-logo{
-	width: 14rem;
+	width: 12rem;
 
 }
 
@@ -32,7 +33,7 @@ body{
 }
 
 .frame {
-    padding: 20px 0;
+    padding: 15px 0;
     border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
@@ -120,8 +121,8 @@ ul{
 
 .content-grid{
     display: grid;
-    grid-template-columns: 60% 40% ;
-    margin-top: 2rem;
+    grid-template-columns: 55% 45% ;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 
 }
@@ -182,23 +183,43 @@ display: flex;
     font-weight: 300;
 }
 
+.width-90{
+    width: 90%;
+}
+
 .form-title{
     margin-top: 1rem;
     margin-bottom: 3rem;
     font-weight: 400;
 }
 
-.#mc_embed_signup .mc-field-group label {
+.carousel-width{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+#mc_embed_signup .mc-field-group label {
     font-size: 16px;
     font-weight: bold;
 }
 
+.w-100{
+    width: 100%;
+
+}
 #mc_embed_signup h2 {
 	font-weight: 400;}
 @media only screen and (max-width: 600px) {
   .content-grid{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse;}
+
+.carousel-width{
+    margin-top: 2rem;
+    grid-template-columns: 10% 80% 10%;
+
+}
 
 
 }
