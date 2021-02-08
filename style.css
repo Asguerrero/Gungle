@@ -143,6 +143,17 @@ ul{
     border: none;
 }
 
+#mc_embed_signup .button{
+	background: #60AD56 !important; 
+    width: 200px !important;
+    height: 50px !important;
+    border-radius: 10px !important;
+    font-size: 16px !important;
+    padding: 13px 18px 13px 18px !important;
+    color: white !important;
+    border: none !important;
+}
+
 .button-div{
     display: flex;
     justify-content: center;
@@ -213,11 +224,13 @@ display: flex;
 
 }
 .size1of2{
-	width: 100%;
+	width: 100% !important;
 }
 
 #mc_embed_signup h2 {
-	font-weight: 400;}
+	font-weight: 400 !important;
+	    font-size: calc(1.325rem + .9vw) !important;
+}
 @media only screen and (max-width: 600px) {
   .content-grid{
     display: flex;
