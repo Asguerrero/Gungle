@@ -167,7 +167,7 @@ ul{
 
 }
 
-.form-input{
+#mc_embed_signup .mc-field-group input {
     min-height: 40px;
     margin: 0 0 20px 0;
     padding: 12px !important;
