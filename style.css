@@ -17,10 +17,14 @@ body{
     box-shadow: 0px 10px 30px rgb(0 0 0 / 20%);
     background-color: white;
     transition: all .6s ease;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; 
+    z-index: 20;
 }
 
 .topbar-logo{
-	width: 12rem;
+	width: 10rem;
 
 }
 
@@ -122,7 +126,7 @@ ul{
 .content-grid{
     display: grid;
     grid-template-columns: 55% 45% ;
-    margin-top: 4rem;
+    margin-top: 10rem;
     margin-bottom: 2rem;
 
 }
@@ -221,6 +225,15 @@ display: flex;
 
 }
 
+.carousel-control-next-icon{
+    display: none;
+
+}
+
+.carousel-control-prev-icon{
+    display: none;
 
 }
 }
+}
+
