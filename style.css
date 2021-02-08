@@ -212,7 +212,9 @@ display: flex;
     width: 100%;
 
 }
-
+.size1of2{
+	width: 100%;
+}
 
 #mc_embed_signup h2 {
 	font-weight: 400;}
