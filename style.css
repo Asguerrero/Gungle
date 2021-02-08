@@ -171,7 +171,7 @@ ul{
     min-height: 40px;
     margin: 0 0 20px 0;
     padding: 12px !important;
-    width: 90%;
+    width: 90% !important;
     color: #656a69;
     font-size: 17px;
     font-weight: 500;
