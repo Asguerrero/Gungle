@@ -247,6 +247,11 @@ display: flex;
 .form-input{
     width: 100%;
 }
+	
+
+.condiciones{
+    margin-left: 1px;
+}
 
 .carousel-control-next-icon{
     display: none;
