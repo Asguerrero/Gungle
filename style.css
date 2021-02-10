@@ -7,6 +7,13 @@ body{
 }
 
 
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
 .topbar-wrapper{
 	position: relative;
     padding: 20px;
@@ -28,7 +35,14 @@ body{
 
 }
 
+.invisible{
+    display: none;
+}
 
+
+.no-style{
+    display: block;
+}
 
 .footer-container {
     position: relative;
@@ -125,8 +139,8 @@ ul{
 
 .content-grid{
     display: grid;
-    grid-template-columns: 55% 45% ;
-    margin-top: 10rem;
+    grid-template-columns: 52% 45% 3% ;
+    margin-top: 8rem;
     margin-bottom: 2rem;
 
 }
@@ -143,17 +157,6 @@ ul{
     border: none;
 }
 
-#mc_embed_signup .button{
-	background: #60AD56 !important; 
-    width: 200px !important;
-    height: 50px !important;
-    border-radius: 10px !important;
-    font-size: 16px !important;
-    padding: 13px 18px 13px 18px !important;
-    color: white !important;
-    border: none !important;
-}
-
 .button-div{
     display: flex;
     justify-content: center;
@@ -167,11 +170,11 @@ ul{
 
 }
 
-#mc_embed_signup .mc-field-group input {
+.form-input{
     min-height: 40px;
     margin: 0 0 20px 0;
     padding: 12px !important;
-    width: 90% !important;
+    width: 90%;
     color: #656a69;
     font-size: 17px;
     font-weight: 500;
@@ -222,15 +225,14 @@ display: flex;
 .w-100{
     width: 100%;
 
-}
-.size1of2{
-	width: 96% !important;
+
 }
 
-#mc_embed_signup h2 {
-	font-weight: 400 !important;
-	    font-size: calc(1.325rem + .9vw) !important;
+.condiciones{
+    margin-left: 6px;
 }
+#mc_embed_signup h2 {
+	font-weight: 400;}
 @media only screen and (max-width: 600px) {
   .content-grid{
     display: flex;
@@ -240,6 +242,10 @@ display: flex;
     margin-top: 2rem;
     grid-template-columns: 10% 80% 10%;
 
+}
+
+.form-input{
+    width: 100%;
 }
 
 .carousel-control-next-icon{
@@ -253,4 +259,3 @@ display: flex;
 }
 }
 }
-
