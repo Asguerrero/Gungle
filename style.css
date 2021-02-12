@@ -342,6 +342,22 @@ display: flex;
     margin-left: 3.5px;
 }
 
+.text-div{
+    display: none;
+    visibility: none;
+     
+}
+
+
+.scroll-content{
+   height: 400px;
+    overflow: hidden;
+}
+.text-div-in{
+    visibility: none;
+    display: none;
+}
+
 .carousel-control-next-icon{
     display: none;
 
@@ -352,4 +368,4 @@ display: flex;
 
 }
 }
-}
+
