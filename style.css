@@ -4,6 +4,7 @@ body{
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 
@@ -47,7 +48,7 @@ body{
 .footer-container {
     position: relative;
     padding: 10px 10px 0 10px;
-    background-color: #323232;
+    background-color: #3e4543;
 }
 
 .frame {
@@ -155,6 +156,7 @@ ul{
     padding: 13px 18px 13px 18px;
     color: white;
     border: none;
+    font-weight: bold;
 }
 
 .button-div{
@@ -171,7 +173,7 @@ ul{
 }
 
 .form-input{
-    min-height: 40px;
+    height: 48px;
     margin: 0 0 20px 0;
     padding: 12px !important;
     width: 90%;
@@ -215,11 +217,13 @@ display: flex;
     width: 100%;
     display: grid;
     grid-template-columns: 22% 55% 22%;
+    grid-template-rows: 85% 15%;
+
 }
 
 #mc_embed_signup .mc-field-group label {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .w-100{
@@ -228,19 +232,100 @@ display: flex;
 
 }
 
+.carousel-control-next{
+    margin-right: 2rem;
+}
+
+.carousel-control-prev{
+    margin-left: 2rem;
+}
+
+.flex-display{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.arrow{
+    color: #3e4543;
+    font-size: 2rem;
+ 
+    font-weight: 900;
+    border: 2px solid #3e4543;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.text-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-unorderd{
+    margin-left: 25px;
+}
+
+
+.scroll-content{
+    height: 550px;
+    overflow: auto;
+}
+
+.titulo-texto{
+    font-weight: 600;
+}
+.text-div-in{
+ width: 80%;
+ line-height: 40px;
+}
+.fa-angle-left{
+     margin-right: 1rem;
+}
+
+.fa-angle-rigth{
+   
+    margin-left: 1rem;
+}
+
+.carousel-item {
+    padding: 2rem;
+}
+.carousel-item img {
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px 1px #6565658c;
+}
+
+.arrows-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.carousel-item{
+    visibility: none;
+}
 .condiciones{
     margin-left: 6px;
+    font-weight: 400 !important;
 }
 #mc_embed_signup h2 {
-	font-weight: 400;}
+	font-weight: 600;
+}
 @media only screen and (max-width: 600px) {
   .content-grid{
     display: flex;
-    flex-direction: column-reverse;}
+    flex-direction: column;}
 
 .carousel-width{
-    margin-top: 2rem;
+   
     grid-template-columns: 10% 80% 10%;
+    margin-bottom: 2rem;
 
 }
 
@@ -248,9 +333,13 @@ display: flex;
     width: 100%;
 }
 	
+.form-button{
+    width: 100%;
+}
+    
 
 .condiciones{
-    margin-left: 1px;
+    margin-left: 3.5px;
 }
 
 .carousel-control-next-icon{
