@@ -523,6 +523,7 @@ display: flex;
 .scroll-content{
    height: 400px;
     overflow: hidden;
+    margin-bottom: 1rem;
 }
 .text-div-in{
     visibility: none;
