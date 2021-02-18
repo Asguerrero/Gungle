@@ -57,7 +57,7 @@ function animate() {
 
 
 
-window.addEventListener("scroll", scroll);
+window.addEventListener("scroll", stop);
 
 function scroll (){
   
@@ -71,15 +71,22 @@ window.addEventListener('wheel', checkScrollDirection);
 
 
 function checkScrollDirection(event) {
+
+  console.log()
+
+
   if (checkScrollDirectionIsUp(event)) {
   
-  	content.scrollBy(0, -17);
+  	content.scrollBy(0, -7);
+    
+   
   	
   	return true
     
   } else {
-
-  	content.scrollBy(0, 17);
+   
+  	content.scrollBy(0, 7);
+    
   	}
   	
 }
@@ -92,17 +99,13 @@ function checkScrollDirectionIsUp(event) {
 }
 
 
-function disableScroll() { 
-    // Get the current page scroll position 
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-  
-        // if any scroll is attempted, set this to the previous value 
-        window.onscroll = function() { 
-            window.scrollTo(scrollLeft, scrollTop); 
-        }; 
-} 
-  
-function enableScroll() { 
-    window.onscroll = function() {}; 
-} 
+
+function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+}
+
+function enableScrolling(){
+    window.onscroll=function(){};
+}
