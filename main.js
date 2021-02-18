@@ -77,7 +77,7 @@ function checkScrollDirection(event) {
 
   if (checkScrollDirectionIsUp(event)) {
   
-  	content.scrollBy(0, -10);
+  	content.scrollBy(0, -8);
     
    
   	
@@ -85,7 +85,7 @@ function checkScrollDirection(event) {
     
   } else {
    
-  	content.scrollBy(0, 10);
+  	content.scrollBy(0, 8);
     
   	}
   	
