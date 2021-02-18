@@ -5,8 +5,23 @@ body{
   font-family: 'Open Sans', sans-serif;
   height: 100vh;
   scroll-behavior: smooth;
+
+
+
 }
 
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 
 .show{
     display: block;
@@ -15,20 +30,32 @@ body{
 .hide{
     display: none;
 }
+
+
+
 .topbar-wrapper{
 	position: relative;
     padding: 20px;
     margin: 0 auto;
     max-width: 1160px;
+
 }
 .status-levitate{
-    box-shadow: 0px 10px 30px rgb(0 0 0 / 20%);
+    
     background-color: white;
     transition: all .6s ease;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; 
     z-index: 20;
+    background: #f7f8f8;
+}
+
+
+
+.box-shadow{
+    box-shadow: 0px 10px 30px rgb(0 0 0 / 20%);
+
 }
 
 .topbar-logo{
@@ -54,6 +81,22 @@ body{
 .frame {
     padding: 15px 0;
     border-bottom: 1px solid rgba(255,255,255,.1);
+   
+
+}
+
+
+.frame-footer{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+
+}
+
+.logo-footer{
+    width: 13rem;
 }
 
 .footer-container .logo {
@@ -95,10 +138,12 @@ i{
 
 .footer-container .follow ul li a {
     display: inline-block;
-    width: 33px;
-    height: 33px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    line-height: 185%;
+    line-height: 230%;
+    text-align: center;
+
     border-radius: 50%;
     box-sizing: border-box;
     background-color: rgba(255,255,255,.15);
@@ -140,23 +185,39 @@ ul{
 
 .content-grid{
     display: grid;
-    grid-template-columns: 52% 45% 3% ;
-    margin-top: 8rem;
+    grid-template-columns: 55% 40% 5% ;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 
+}
+
+
+.redes-title{
+    text-align: center;
+    font-size: 17px;
+    line-height: 25px;
+
+}
+
+
+.redes-wrapper{
+
+    background: #f7f8f8;
+    padding: 40px 16px;
 }
 
 .form-button{
 
     background: #60AD56 !important; 
-    width: 200px;
-    height: 50px;
+    width: 90%;
+    
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 17px;
     padding: 13px 18px 13px 18px;
     color: white;
     border: none;
     font-weight: bold;
+    padding: 20px;
 }
 
 .button-div{
@@ -170,6 +231,20 @@ ul{
     justify-content: center;
     align-items: center;
 
+}
+
+.flex-justify-start{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.white{
+    color: white;
+}
+.no-padding li a{
+    text-decoration: underline !important;
 }
 
 .form-input{
@@ -208,9 +283,12 @@ display: flex;
 }
 
 .form-title{
-    margin-top: 1rem;
+    margin-top: 8rem;
     margin-bottom: 3rem;
-    font-weight: 400;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.1rem 0.5rem;
 }
 
 .carousel-width{
@@ -245,6 +323,15 @@ display: flex;
     flex-direction: column-reverse;
 }
 
+
+.section-wrapper {
+    float: none !important;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto !important;
+    padding: 40px 16px;
+    box-sizing: border-box;}
+
 .arrow{
     color: #3e4543;
     font-size: 2rem;
@@ -273,6 +360,7 @@ display: flex;
 
 .scroll-content{
     height: 550px;
+    margin-left: 4rem;
     overflow: auto;
 }
 
@@ -307,6 +395,42 @@ display: flex;
 }
 
 
+.compartir-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.compartir-redes i{
+   
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    margin: 0.3rem;
+    
+}
+
+
+
+ .compartir-redes .fa-facebook-f{
+    background: #3b5998;
+}
+
+.compartir-redes .fa-linkedin-in{
+    background: #0077b5;
+}
+
+.compartir-redes .fa-twitter{
+    background: #1da1f2;
+}
+
+.compartir-redes .fa-envelope{
+    background:#8b8f8e;
+}
+.compartir-redes a{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .carousel-item{
     visibility: none;
 }
@@ -317,10 +441,31 @@ display: flex;
 #mc_embed_signup h2 {
 	font-weight: 600;
 }
+
+
+
+
+.compartir-redes a{
+    text-decoration: none;
+}
+
+
+.mobile{
+   display: none;
+    visibility: hidden;
+}
+
 @media only screen and (max-width: 600px) {
+
+
+    .scroll-content{
+        margin-left: 0px;
+    }
   .content-grid{
     display: flex;
-    flex-direction: column;}
+    flex-direction: column;
+    margin-top: 0px;
+}
 
 .carousel-width{
    
@@ -328,6 +473,16 @@ display: flex;
     margin-bottom: 2rem;
 
 }
+
+.redes-title{
+    font-size: 15px;
+}
+
+.compartir-redes i{
+    padding: 0.65rem 1.2rem;
+    border-radius: 3px;
+    margin: 0.15rem;}
+
 
 .form-input{
     width: 100%;
@@ -338,6 +493,13 @@ display: flex;
 }
     
 
+.frame-footer{
+    
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
 .condiciones{
     margin-left: 3.5px;
 }
@@ -346,6 +508,15 @@ display: flex;
     display: none;
     visibility: none;
      
+}
+
+.form-title{
+    margin-bottom: 0px;
+}
+
+.frame-footer{
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 
@@ -358,14 +529,27 @@ display: flex;
     display: none;
 }
 
-.carousel-control-next-icon{
-    display: none;
-
+.mobile{
+   
+    visibility: visible !important;
+    display: flex !important;
+    flex-direction: column;
 }
 
-.carousel-control-prev-icon{
-    display: none;
+.text-div-in-m{
+width: 85%;
+    line-height: 40px;}
 
+.footer-container .follow ul li a{
+    height: 33px;
+    width: 33px;
+     line-height: 180%;
 }
+
+.logo-footer {
+    margin-bottom: 1rem;
+}
+
+
 }
 
