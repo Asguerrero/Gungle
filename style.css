@@ -32,10 +32,14 @@ body{
 }
 
 
+.disable-scroll{
+    overflow: hidden
+}
 
 .topbar-wrapper{
 	position: relative;
-    padding: 20px;
+   
+    padding: 0px 20px;
     margin: 0 auto;
     max-width: 1160px;
 
@@ -59,7 +63,8 @@ body{
 }
 
 .topbar-logo{
-	width: 10rem;
+	width: 8rem;
+    
 
 }
 
@@ -90,13 +95,13 @@ body{
      display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 9rem;
+    margin-right: 7rem;
 
 }
 
 .logo-footer{
-    width: 13rem;
+    width: 8rem;
 }
 
 .footer-container .logo {

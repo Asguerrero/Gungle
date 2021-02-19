@@ -3,13 +3,74 @@ let content = document.getElementById('content-div-5');
 let bar = document.getElementById('getID');
 let nav = document.getElementById('nav');
 
-
+var contentHeight = nav.clientHeight;
 
 // get the element to ani
 var navHeight = nav.clientHeight;
 
 // listen for scroll event and call animate function
 document.addEventListener('scroll', animate);
+document.addEventListener('scroll', divTop);
+
+
+
+function myScript(event){
+
+  var windowHeight = window.innerHeight;
+  // get number of pixels that the document is scrolled
+  var scrollY = window.scrollY || window.pageYOffset;
+    var scrollPosition = scrollY + windowHeight;
+
+  
+  if (checkScrollDirectionIsUp(event) ) {
+    console.log('up')
+
+    var elementPosition = content.getBoundingClientRect().top + scrollY + contentHeight;
+
+    var measure = (elementPosition*49)/100
+    var measure2 = (elementPosition*20)/100
+    console.log('scrollY')
+    console.log(scrollY)
+    console.log('measure')
+    console.log(measure)
+    console.log(elementPosition)
+
+
+    if (scrollY < measure ){
+      document.body.style.overflowY = "hidden";
+      content.style.overflowY= "scroll";
+      content.scrollBy(0, -8);
+      
+    }
+
+    if (content.scrollTop == 0){
+      document.body.style.overflowY = "scroll";
+      document.removeEventListener("wheel", myScript);
+    }
+
+    
+
+    
+  }
+  else{
+
+    console.log('down')
+
+
+
+  content.scrollBy(0, 8);
+  var elemScrolPosition = content.scrollHeight - content.scrollTop - content.clientHeight;
+
+
+  if (elemScrolPosition == 0){
+    document.body.style.overflowY = "scroll";
+   
+
+
+  }
+}
+}
+
 
 // check if element is in view
 function inView() {
@@ -20,16 +81,12 @@ function inView() {
   
   // get current scroll position (distance from the top of the page to the bottom of the current viewport)
   var scrollPosition = scrollY + windowHeight;
-  console.log('scroll')
 
-  console.log(scrollPosition);
 
   // get element position (distance from the top of the page to the bottom of the element)
   var elementPosition = nav.getBoundingClientRect().top + scrollY + navHeight;
 
-console.log('elementPosition')
-  console.log(elementPosition);
-  
+
   if (elementPosition == 92){
     return false;
   }
@@ -38,6 +95,33 @@ console.log('elementPosition')
   }
   
   return false;
+}
+
+
+function divTop(){
+
+var windowHeight = window.innerHeight;
+  // get number of pixels that the document is scrolled
+  var scrollY = window.scrollY || window.pageYOffset;
+  
+  // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+  var scrollPosition = scrollY + windowHeight;
+
+
+  // get element position (distance from the top of the page to the bottom of the element)
+  var elementPosition = content.getBoundingClientRect().top + scrollY + contentHeight;
+  
+  var measure = (elementPosition*40)/100
+  if (scrollY > measure){
+  
+    
+    document.body.style.overflowY = "hidden";
+    document.addEventListener("wheel", myScript);
+    myScript(event);
+
+
+  }
+
 }
 
 // animate element when it is in view
@@ -57,39 +141,6 @@ function animate() {
 
 
 
-window.addEventListener("scroll", stop);
-
-function scroll (){
-  
-  
-
-}
-
-
-
-window.addEventListener('wheel', checkScrollDirection);
-
-
-function checkScrollDirection(event) {
-
-  console.log()
-
-
-  if (checkScrollDirectionIsUp(event)) {
-  
-  	content.scrollBy(0, -8);
-    
-   
-  	
-  	return true
-    
-  } else {
-   
-  	content.scrollBy(0, 8);
-    
-  	}
-  	
-}
 
 function checkScrollDirectionIsUp(event) {
   if (event.wheelDelta) {
@@ -98,14 +149,5 @@ function checkScrollDirectionIsUp(event) {
   return event.deltaY < 0;
 }
 
+ 
 
-
-function disableScrolling(){
-    var x=window.scrollX;
-    var y=window.scrollY;
-    window.onscroll=function(){window.scrollTo(x, y);};
-}
-
-function enableScrolling(){
-    window.onscroll=function(){};
-}
