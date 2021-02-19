@@ -39,7 +39,7 @@ function myScript(event){
     if (scrollY < measure ){
       document.body.style.overflowY = "hidden";
       content.style.overflowY= "scroll";
-      content.scrollBy(0, -8);
+      content.scrollBy(0, -6);
       
     }
 
@@ -58,7 +58,7 @@ function myScript(event){
 
 
 
-  content.scrollBy(0, 8);
+  content.scrollBy(0, 6);
   var elemScrolPosition = content.scrollHeight - content.scrollTop - content.clientHeight;
 
 
