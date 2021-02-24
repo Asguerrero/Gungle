@@ -139,7 +139,7 @@ var windowHeight = window.innerHeight;
   var elementPosition = content.getBoundingClientRect().top + scrollY + contentHeight;
   
   var measure = (elementPosition*40)/100
-  if (scrolled > 28){
+  if (scrolled > 26){
   
     
     document.body.style.overflowY = "hidden";
