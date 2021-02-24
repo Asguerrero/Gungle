@@ -84,7 +84,7 @@ function myScript(event){
 
 
 
-  content.scrollBy(0, 6);
+  content.scrollBy(0, 7);
   var elemScrolPosition = content.scrollHeight - content.scrollTop - content.clientHeight;
 
 
