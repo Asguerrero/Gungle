@@ -2,6 +2,13 @@
 let content = document.getElementById('content-div-5');
 let bar = document.getElementById('getID');
 let nav = document.getElementById('nav');
+let grid = document.getElementById('content-grid');
+
+
+
+var myDiv = document.getElementById("myDiv");
+    
+
 
 var contentHeight = nav.clientHeight;
 
@@ -11,6 +18,31 @@ var navHeight = nav.clientHeight;
 // listen for scroll event and call animate function
 document.addEventListener('scroll', animate);
 document.addEventListener('scroll', divTop);
+
+document.addEventListener('scroll', amountscrolled);
+
+
+function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+    )
+}
+
+
+function amountscrolled(){
+	console.log('ehyyyy')
+    var winheight= window.innerHeight || (document.documentElement || document.body).clientHeight;
+    var docheight = getDocHeight();
+    var scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    var trackLength = docheight - winheight;
+    var pctScrolled = Math.floor(scrollTop/trackLength * 100); // gets percentage scrolled (ie: 80 or NaN if tracklength == 0)
+    console.log(pctScrolled + '% scrolled')
+    return pctScrolled;
+}
+ 
 
 
 
@@ -23,20 +55,14 @@ function myScript(event){
 
   
   if (checkScrollDirectionIsUp(event) ) {
-    console.log('up')
+    
 
     var elementPosition = content.getBoundingClientRect().top + scrollY + contentHeight;
 
-    var measure = (elementPosition*49)/100
-    var measure2 = (elementPosition*20)/100
-    console.log('scrollY')
-    console.log(scrollY)
-    console.log('measure')
-    console.log(measure)
-    console.log(elementPosition)
-
-
-    if (scrollY < measure ){
+   
+    
+ 	scrolled = amountscrolled();
+    if (scrolled < 30){
       document.body.style.overflowY = "hidden";
       content.style.overflowY= "scroll";
       content.scrollBy(0, -6);
@@ -54,7 +80,7 @@ function myScript(event){
   }
   else{
 
-    console.log('down')
+   
 
 
 
@@ -106,13 +132,14 @@ var windowHeight = window.innerHeight;
   
   // get current scroll position (distance from the top of the page to the bottom of the current viewport)
   var scrollPosition = scrollY + windowHeight;
+ scrolled = amountscrolled()
 
 
   // get element position (distance from the top of the page to the bottom of the element)
   var elementPosition = content.getBoundingClientRect().top + scrollY + contentHeight;
   
   var measure = (elementPosition*40)/100
-  if (scrollY > measure){
+  if (scrolled > 28){
   
     
     document.body.style.overflowY = "hidden";
@@ -134,7 +161,7 @@ function animate() {
 
   else if(inView() == false){
     nav.classList.remove('box-shadow');
-    console.log('tets nav')
+  
   }
 }
 
